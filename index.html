@@ -1,0 +1,2968 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para mi niña ❤️‍🩹</title>
+
+<!-- GENERADOR DEL CÓDIGO QR -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<style>
+
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Georgia,"Times New Roman",serif;
+    background:#080008;
+    color:white;
+    overflow-x:hidden;
+}
+
+body.bloqueado{
+    overflow:hidden;
+}
+
+/* =====================================================
+   FONDO
+===================================================== */
+
+.fondo{
+    position:fixed;
+    inset:0;
+    z-index:-5;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #6d123c 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            #420c2a 0%,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #090009,
+            #270014,
+            #090009
+        );
+}
+
+.luz{
+    position:fixed;
+
+    width:300px;
+    height:300px;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+    opacity:.25;
+
+    pointer-events:none;
+
+    z-index:-3;
+
+    animation:
+        moverLuz
+        12s
+        infinite
+        alternate
+        ease-in-out;
+}
+
+.luz1{
+    background:#ff2675;
+    top:5%;
+    left:-100px;
+}
+
+.luz2{
+    background:#a900ff;
+    bottom:0;
+    right:-100px;
+    animation-delay:4s;
+}
+
+@keyframes moverLuz{
+
+    from{
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    to{
+        transform:
+            translate(120px,80px)
+            scale(1.4);
+    }
+
+}
+
+/* =====================================================
+   PANTALLA INICIAL
+===================================================== */
+
+#inicio{
+    position:fixed;
+
+    inset:0;
+
+    z-index:1000;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:25px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #35001f,
+            #10000d 60%,
+            #030003
+        );
+
+    transition:
+        opacity 1.2s ease,
+        visibility 1.2s ease;
+}
+
+#inicio.oculto{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+}
+
+.inicio-contenido{
+
+    max-width:600px;
+
+    animation:
+        aparecer
+        1.5s
+        ease;
+}
+
+.mini-corazon{
+
+    font-size:60px;
+
+    animation:
+        latir
+        1.4s
+        infinite;
+
+    margin-bottom:25px;
+}
+
+.inicio-contenido h1{
+
+    font-size:
+        clamp(
+            38px,
+            10vw,
+            70px
+        );
+
+    color:#ffc1d5;
+
+    text-shadow:
+        0 0 15px #ff3c78,
+        0 0 35px #ff174f;
+
+    margin-bottom:20px;
+}
+
+.inicio-contenido p{
+
+    color:#eeb9ca;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    margin-bottom:35px;
+}
+
+.boton-regalo{
+
+    border:
+        1px solid
+        rgba(255,255,255,.3);
+
+    padding:
+        17px 35px;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff3978,
+            #c71958
+        );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 0 20px
+        rgba(255,50,120,.5),
+
+        0 10px 30px
+        rgba(0,0,0,.4);
+
+    transition:.3s;
+}
+
+.boton-regalo:hover{
+
+    transform:scale(1.07);
+
+}
+
+/* =====================================================
+   CORAZONES FLOTANDO
+===================================================== */
+
+.corazon{
+
+    position:fixed;
+
+    bottom:-50px;
+
+    z-index:1;
+
+    pointer-events:none;
+
+    animation:
+        subir
+        linear
+        forwards;
+
+    opacity:0;
+}
+
+@keyframes subir{
+
+    0%{
+
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(.7);
+
+        opacity:0;
+
+    }
+
+    15%{
+        opacity:.8;
+    }
+
+    80%{
+        opacity:.7;
+    }
+
+    100%{
+
+        transform:
+            translateY(-115vh)
+            rotate(25deg)
+            scale(1.4);
+
+        opacity:0;
+
+    }
+
+}
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.contenedor{
+
+    width:92%;
+
+    max-width:1000px;
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:2;
+}
+
+/* =====================================================
+   BOTÓN DE MÚSICA
+===================================================== */
+
+.musica{
+
+    position:fixed;
+
+    right:20px;
+    top:20px;
+
+    z-index:100;
+
+    width:52px;
+    height:52px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.3);
+
+    background:
+        rgba(50,0,25,.75);
+
+    backdrop-filter:blur(10px);
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 0 20px
+        rgba(255,50,120,.4);
+}
+
+/* =====================================================
+   PORTADA
+===================================================== */
+
+.portada{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    flex-direction:column;
+
+    padding:40px 15px;
+}
+
+.corazon-grande{
+
+    font-size:
+        clamp(
+            70px,
+            15vw,
+            120px
+        );
+
+    animation:
+        latir
+        1.5s
+        infinite;
+
+    filter:
+        drop-shadow(
+            0 0 25px
+            #ff2c6d
+        );
+
+    margin-bottom:25px;
+}
+
+@keyframes latir{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.18);
+    }
+
+}
+
+.portada h1{
+
+    font-size:
+        clamp(
+            42px,
+            9vw,
+            80px
+        );
+
+    color:#ffb8cd;
+
+    text-shadow:
+        0 0 25px
+        #ff3477;
+
+    margin-bottom:20px;
+
+    animation:
+        aparecer
+        2s
+        ease;
+}
+
+.portada .subtitulo{
+
+    color:#ffe0e9;
+
+    font-size:
+        clamp(
+            18px,
+            4vw,
+            24px
+        );
+
+    letter-spacing:2px;
+}
+
+.flecha{
+
+    margin-top:60px;
+
+    font-size:30px;
+
+    animation:
+        bajar
+        1.5s
+        infinite;
+
+    opacity:.7;
+}
+
+@keyframes bajar{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(12px);
+    }
+
+}
+
+/* =====================================================
+   CARTAS
+===================================================== */
+
+.carta{
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.97),
+            rgba(255,248,250,.97)
+        );
+
+    color:#391625;
+
+    padding:
+        clamp(
+            25px,
+            6vw,
+            55px
+        );
+
+    border-radius:25px;
+
+    margin:
+        30px 0 90px;
+
+    box-shadow:
+
+        0 20px 70px
+        rgba(0,0,0,.5),
+
+        0 0 50px
+        rgba(255,40,110,.2);
+
+    overflow:hidden;
+}
+
+.carta::before{
+
+    content:"❤️";
+
+    position:absolute;
+
+    right:20px;
+
+    top:15px;
+
+    font-size:80px;
+
+    opacity:.06;
+
+    transform:rotate(20deg);
+}
+
+.carta h2{
+
+    text-align:center;
+
+    color:#d82962;
+
+    font-size:
+        clamp(
+            30px,
+            6vw,
+            45px
+        );
+
+    margin-bottom:35px;
+}
+
+.carta p{
+
+    font-family:Arial,sans-serif;
+
+    font-size:
+        clamp(
+            16px,
+            3vw,
+            19px
+        );
+
+    line-height:1.9;
+
+    margin-bottom:24px;
+}
+
+.resaltado{
+
+    color:#d62861;
+
+    font-weight:bold;
+}
+
+.firma-carta{
+
+    text-align:right;
+
+    font-family:Georgia,serif;
+
+    font-size:25px;
+
+    color:#c7285b;
+
+    margin-top:40px;
+}
+
+/* =====================================================
+   TÍTULOS
+===================================================== */
+
+.titulo-seccion{
+
+    text-align:center;
+
+    margin-bottom:45px;
+}
+
+.titulo-seccion small{
+
+    color:#ff719c;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+}
+
+.titulo-seccion h2{
+
+    margin-top:10px;
+
+    font-size:
+        clamp(
+            32px,
+            7vw,
+            52px
+        );
+
+    color:#ffc0d2;
+
+    text-shadow:
+        0 0 20px
+        rgba(255,40,110,.5);
+}
+
+/* =====================================================
+   ÁLBUM
+===================================================== */
+
+.album{
+
+    position:relative;
+
+    max-width:850px;
+
+    margin:auto;
+}
+
+.foto-principal{
+
+    position:relative;
+
+    width:100%;
+
+    height:
+        min(
+            70vh,
+            650px
+        );
+
+    min-height:400px;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+        0 25px 70px
+        rgba(0,0,0,.6),
+
+        0 0 30px
+        rgba(255,40,120,.25);
+
+    background:#10000a;
+}
+
+.foto-principal img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+    display:block;
+
+    transition:
+        opacity .4s,
+        transform .7s;
+
+    background:#10000a;
+}
+
+.foto-principal.cambiando img{
+
+    opacity:0;
+
+    transform:scale(1.08);
+}
+
+.numero-foto{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    background:
+        rgba(0,0,0,.45);
+
+    backdrop-filter:blur(10px);
+
+    padding:
+        8px 15px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    z-index:10;
+}
+
+.texto-foto{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+
+    right:0;
+
+    padding:
+        70px 25px 25px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.85)
+        );
+
+    z-index:5;
+}
+
+.texto-foto h3{
+
+    font-size:25px;
+
+    margin-bottom:5px;
+}
+
+.texto-foto p{
+
+    color:#ffdce6;
+}
+
+/* =====================================================
+   FLECHAS DEL ÁLBUM
+===================================================== */
+
+.flecha-foto{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:
+        translateY(-50%);
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,255,255,.18);
+
+    backdrop-filter:blur(10px);
+
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    z-index:20;
+
+    transition:.3s;
+}
+
+.flecha-foto:hover{
+
+    background:
+        rgba(255,60,120,.7);
+
+    transform:
+        translateY(-50%)
+        scale(1.1);
+}
+
+.anterior{
+    left:15px;
+}
+
+.siguiente{
+    right:15px;
+}
+
+/* =====================================================
+   MINIATURAS
+===================================================== */
+
+.miniaturas{
+
+    display:flex;
+
+    gap:12px;
+
+    justify-content:center;
+
+    margin-top:20px;
+
+    flex-wrap:wrap;
+}
+
+.miniatura{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:12px;
+
+    object-fit:cover;
+
+    cursor:pointer;
+
+    opacity:.5;
+
+    border:
+        2px solid
+        transparent;
+
+    transition:.3s;
+}
+
+.miniatura:hover{
+
+    opacity:.9;
+
+    transform:translateY(-3px);
+}
+
+.miniatura.activa{
+
+    opacity:1;
+
+    border-color:#ff4c83;
+
+    box-shadow:
+        0 0 15px
+        #ff3978;
+
+    transform:
+        translateY(-5px);
+}
+
+/* =====================================================
+   RECUERDOS
+===================================================== */
+
+.recuerdos{
+
+    margin:120px 0;
+}
+
+.recuerdos-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(230px,1fr)
+        );
+
+    gap:25px;
+}
+
+.recuerdo{
+
+    padding:
+        30px 25px;
+
+    border-radius:22px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    backdrop-filter:blur(12px);
+
+    text-align:center;
+
+    transition:.4s;
+}
+
+.recuerdo:hover{
+
+    transform:
+        translateY(-8px);
+
+    background:
+        rgba(255,255,255,.1);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,.3);
+}
+
+.recuerdo .icono{
+
+    font-size:45px;
+
+    margin-bottom:15px;
+}
+
+.recuerdo h3{
+
+    color:#ffabc3;
+
+    margin-bottom:12px;
+
+    font-size:23px;
+}
+
+.recuerdo p{
+
+    color:#e9cbd5;
+
+    line-height:1.7;
+
+    font-family:Arial,sans-serif;
+}
+
+/* =====================================================
+   SEPARADOR
+===================================================== */
+
+.separador{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin:90px 0;
+
+    color:#ff719b;
+}
+
+.separador::before,
+.separador::after{
+
+    content:"";
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ff4c83
+        );
+
+    flex:1;
+}
+
+/* =====================================================
+   CÓDIGO QR
+===================================================== */
+
+.qr-seccion{
+
+    margin:
+        120px 0 90px;
+
+    text-align:center;
+}
+
+.qr-contenedor{
+
+    max-width:550px;
+
+    margin:auto;
+
+    padding:
+        40px 25px;
+
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+
+        0 20px 60px
+        rgba(0,0,0,.4),
+
+        0 0 35px
+        rgba(255,40,120,.2);
+}
+
+.qr-mensaje{
+
+    color:#f5dce4;
+
+    font-family:Arial,sans-serif;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+}
+
+.qr-blanco{
+
+    display:inline-block;
+
+    padding:15px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 0 30px
+        rgba(255,255,255,.25);
+
+    margin:
+        10px 0 25px;
+}
+
+#codigoQR img{
+
+    width:230px;
+
+    height:230px;
+
+    display:block;
+}
+
+.qr-instruccion{
+
+    color:#ffabc3;
+
+    font-size:16px;
+
+    margin-bottom:20px;
+}
+
+.qr-final{
+
+    color:#e9cbd5;
+
+    font-family:Arial,sans-serif;
+
+    line-height:1.7;
+
+    font-size:15px;
+}
+
+/* =====================================================
+   SORPRESA
+===================================================== */
+
+.sorpresa{
+
+    min-height:80vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:
+        70px 15px;
+}
+
+.sorpresa-contenido{
+
+    max-width:700px;
+}
+
+.sorpresa-contenido .regalo{
+
+    font-size:85px;
+
+    cursor:pointer;
+
+    animation:
+        flotar
+        2s
+        infinite
+        ease-in-out;
+
+    filter:
+        drop-shadow(
+            0 0 25px
+            #ff3c78
+        );
+}
+
+@keyframes flotar{
+
+    0%,100%{
+
+        transform:
+            translateY(0)
+            rotate(-3deg);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-15px)
+            rotate(3deg);
+
+    }
+
+}
+
+.sorpresa h2{
+
+    margin-top:25px;
+
+    font-size:
+        clamp(
+            34px,
+            7vw,
+            55px
+        );
+
+    color:#ffc0d2;
+}
+
+.sorpresa p{
+
+    margin-top:15px;
+
+    color:#eacbd5;
+
+    font-size:18px;
+}
+
+.boton-sorpresa{
+
+    margin-top:35px;
+
+    padding:
+        17px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff3d78,
+            #c51855
+        );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 0 30px
+        rgba(255,40,110,.45);
+
+    transition:.3s;
+}
+
+.boton-sorpresa:hover{
+
+    transform:scale(1.08);
+}
+
+/* =====================================================
+   MENSAJE FINAL
+===================================================== */
+
+#mensajeFinal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #530d31,
+            #17000e 55%,
+            #030003
+        );
+
+    z-index:2000;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:25px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:1s;
+}
+
+#mensajeFinal.mostrar{
+
+    opacity:1;
+
+    visibility:visible;
+}
+
+.final-contenido{
+
+    max-width:750px;
+
+    transform:scale(.7);
+
+    transition:1s;
+}
+
+#mensajeFinal.mostrar
+.final-contenido{
+
+    transform:scale(1);
+}
+
+.final-corazon{
+
+    font-size:100px;
+
+    animation:
+        latir
+        1.2s
+        infinite;
+}
+
+.final-contenido h2{
+
+    margin:25px 0;
+
+    font-size:
+        clamp(
+            38px,
+            9vw,
+            70px
+        );
+
+    color:#ffc0d3;
+
+    text-shadow:
+        0 0 25px
+        #ff3978;
+}
+
+.final-contenido p{
+
+    font-size:
+        clamp(
+            18px,
+            4vw,
+            24px
+        );
+
+    line-height:1.8;
+
+    color:#f3d7e0;
+
+    margin-bottom:15px;
+}
+
+.final-firma{
+
+    margin-top:35px;
+
+    color:#ff719b;
+
+    font-size:28px;
+
+    font-style:italic;
+}
+
+.cerrar-final{
+
+    margin-top:30px;
+
+    padding:
+        12px 25px;
+
+    border-radius:30px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.2);
+
+    background:
+        rgba(255,255,255,.08);
+
+    color:white;
+
+    cursor:pointer;
+}
+
+/* =====================================================
+   EXPLOSIÓN DE CORAZONES
+===================================================== */
+
+.explosion{
+
+    position:fixed;
+
+    pointer-events:none;
+
+    z-index:3000;
+
+    font-size:30px;
+
+    animation:
+        explotar
+        2s
+        forwards
+        ease-out;
+}
+
+@keyframes explotar{
+
+    0%{
+
+        transform:
+            translate(0,0)
+            scale(.5);
+
+        opacity:1;
+    }
+
+    100%{
+
+        transform:
+            translate(
+                var(--x),
+                var(--y)
+            )
+            rotate(var(--r))
+            scale(1.5);
+
+        opacity:0;
+    }
+
+}
+
+/* =====================================================
+   ANIMACIONES
+===================================================== */
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+.revelar{
+
+    opacity:0;
+
+    transform:
+        translateY(40px);
+
+    transition:
+        1s ease;
+}
+
+.revelar.visible{
+
+    opacity:1;
+
+    transform:
+        translateY(0);
+}
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media(max-width:600px){
+
+    .musica{
+
+        width:46px;
+
+        height:46px;
+
+        right:12px;
+
+        top:12px;
+    }
+
+    .foto-principal{
+
+        min-height:420px;
+    }
+
+    .miniatura{
+
+        width:58px;
+
+        height:58px;
+    }
+
+    .carta{
+
+        border-radius:18px;
+    }
+
+    .texto-foto h3{
+
+        font-size:21px;
+    }
+
+    #codigoQR img{
+
+        width:200px;
+
+        height:200px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body class="bloqueado">
+
+<!-- =====================================================
+     FONDO
+===================================================== -->
+
+<div class="fondo"></div>
+
+<div class="luz luz1"></div>
+
+<div class="luz luz2"></div>
+
+
+<!-- =====================================================
+     PANTALLA DE INICIO
+===================================================== -->
+
+<section id="inicio">
+
+    <div class="inicio-contenido">
+
+        <div class="mini-corazon">
+            ❤️‍🩹
+        </div>
+
+        <h1>
+            Para mi niña
+        </h1>
+
+        <p>
+
+            Preparé algo pequeño para ti...
+
+            <br>
+
+            aunque quizás terminó siendo
+            un poquito más grande
+            de lo que esperaba. ❤️
+
+        </p>
+
+        <button
+            class="boton-regalo"
+            onclick="abrirRegalo()">
+
+            Abrir mi regalo 💌
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MÚSICA
+===================================================== -->
+
+<audio
+    id="musicaAudio"
+    loop>
+
+    <source
+        src="fotos/nuestra-cancion.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<button
+    class="musica"
+    id="botonMusica"
+    onclick="alternarMusica()">
+
+    🔊
+
+</button>
+
+
+<!-- =====================================================
+     CONTENIDO PRINCIPAL
+===================================================== -->
+
+<main class="contenedor">
+
+
+    <!-- =================================================
+         PORTADA
+    ================================================== -->
+
+    <section class="portada">
+
+        <div class="corazon-grande">
+            ❤️‍🩹
+        </div>
+
+        <h1>
+            Felices 4 meses
+        </h1>
+
+        <p class="subtitulo">
+            Para la mujer que amo ❤️
+        </p>
+
+        <div class="flecha">
+            ↓
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         PRIMERA CARTA
+    ================================================== -->
+
+    <section class="carta revelar">
+
+        <h2>
+            Felices 4 meses mi vida ❤️‍🩹
+        </h2>
+
+        <p>
+
+            La verda 4 meses parecen poquito
+            pero contigo siento q he vivido tantas
+            cosas q aveces me pongo a pensar en
+            todo lo q hemos pasado juntos y me
+            doy cuenta q apesar de todo aqui seguimos.
+
+        </p>
+
+        <p>
+
+            Hemos tenido momentos bonitos
+            momentos dificiles en los q parecia q
+            todo se complicaba pero nunca deje de
+            quererte y nunca deje de sentir q eras
+            tu la mujer q queria a mi lado.
+
+        </p>
+
+        <p>
+
+            Contigo conoci abrazos q me hacian
+            sentir en casa besos q me hacian
+            olvidar todo y momentos tan especiales
+            q se quedaron guardados para siempre
+            en mi corazón.
+
+            Cada recuerdo contigo tiene algo q
+            me hace sonreir.
+
+        </p>
+
+        <p>
+
+            Gracias por quedarte gracias por
+            aguantarme gracias por hacerme sentir
+            amado y por permitirme amarte de una
+            forma tan intensa y tan real.
+
+        </p>
+
+        <p>
+
+            No te voy a mentir aveces soy celoso
+            aveces pienso demasiado aveces me
+            equivoco pero si hay algo de lo q estoy
+            seguro es q te amo con todo mi corazón
+            y q cada dia q pasa me importas mas.
+
+        </p>
+
+        <p>
+
+            Y si hoy pudiera pedir algo seria
+            seguir sumando meses contigo seguir
+            creando recuerdos seguir riendo seguir
+            abrazandote y seguir demostrando q
+            todo lo q siento por ti es de verdad.
+
+        </p>
+
+        <p>
+
+            Porque al final no quiero una historia
+            perfecta.
+
+            <span class="resaltado">
+                Quiero nuestra historia.
+            </span>
+
+            Con nuestros momentos buenos
+            nuestros errores nuestras locuras y
+            todas esas pequeñas cosas q hacen
+            q seas tú.
+
+        </p>
+
+        <p>
+
+            Felices 4 meses mi niña hermosa ❤️‍🩹
+
+        </p>
+
+        <p>
+
+            Te amo muchisimo y gracias por estos
+            4 meses q para mi significan mas de
+            lo q imaginas.
+
+        </p>
+
+        <div class="firma-carta">
+
+            Siempre tú. ❤️
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         ÁLBUM
+    ================================================== -->
+
+    <section class="revelar">
+
+        <div class="titulo-seccion">
+
+            <small>
+                Nuestros recuerdos
+            </small>
+
+            <h2>
+                Nuestro pequeño álbum ❤️
+            </h2>
+
+        </div>
+
+
+        <div class="album">
+
+            <div
+                class="foto-principal"
+                id="fotoPrincipal">
+
+
+                <img
+                    id="fotoGrande"
+                    src="fotos/foto1.jpeg"
+                    alt="Nuestro recuerdo">
+
+
+                <div
+                    class="numero-foto"
+                    id="numeroFoto">
+
+                    1 / 5
+
+                </div>
+
+
+                <button
+                    class="flecha-foto anterior"
+                    onclick="fotoAnterior()">
+
+                    ‹
+
+                </button>
+
+
+                <button
+                    class="flecha-foto siguiente"
+                    onclick="fotoSiguiente()">
+
+                    ›
+
+                </button>
+
+
+                <div class="texto-foto">
+
+                    <h3 id="tituloFoto">
+
+                        Nuestro primer recuerdo
+
+                    </h3>
+
+                    <p id="descripcionFoto">
+
+                        Un momento que quiero
+                        guardar para siempre.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MINIATURAS -->
+
+            <div class="miniaturas">
+
+                <img
+                    class="miniatura activa"
+                    src="fotos/foto1.jpeg"
+                    alt="Foto 1"
+                    onclick="irAFoto(0)">
+
+
+                <img
+                    class="miniatura"
+                    src="fotos/foto2.jpeg"
+                    alt="Foto 2"
+                    onclick="irAFoto(1)">
+
+
+                <img
+                    class="miniatura"
+                    src="fotos/foto3.jpeg"
+                    alt="Foto 3"
+                    onclick="irAFoto(2)">
+
+
+                <img
+                    class="miniatura"
+                    src="fotos/foto4.jpeg"
+                    alt="Foto 4"
+                    onclick="irAFoto(3)">
+
+
+                <img
+                    class="miniatura"
+                    src="fotos/foto5.jpeg"
+                    alt="Foto 5"
+                    onclick="irAFoto(4)">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         SEPARADOR
+    ================================================== -->
+
+    <div class="separador">
+
+        ❤️‍🩹
+
+    </div>
+
+
+    <!-- =================================================
+         RECUERDOS
+    ================================================== -->
+
+    <section class="recuerdos revelar">
+
+        <div class="titulo-seccion">
+
+            <small>
+                Si tuviera que resumirnos...
+            </small>
+
+            <h2>
+                Me quedo con esto
+            </h2>
+
+        </div>
+
+
+        <div class="recuerdos-grid">
+
+
+            <div class="recuerdo">
+
+                <div class="icono">
+                    🫂
+                </div>
+
+                <h3>
+                    Tus abrazos
+                </h3>
+
+                <p>
+
+                    Porque hay abrazos que simplemente
+                    hacen que todo lo demás deje de
+                    importar por un momento.
+
+                </p>
+
+            </div>
+
+
+            <div class="recuerdo">
+
+                <div class="icono">
+                    👀
+                </div>
+
+                <h3>
+                    Tus ojitos
+                </h3>
+
+                <p>
+
+                    Esos ojitos que sin decir demasiado
+                    pueden cambiar completamente mi día.
+
+                </p>
+
+            </div>
+
+
+            <div class="recuerdo">
+
+                <div class="icono">
+                    😂
+                </div>
+
+                <h3>
+                    Nuestras locuras
+                </h3>
+
+                <p>
+
+                    Esos momentos que probablemente
+                    para otros no significan nada pero
+                    para nosotros lo significan todo.
+
+                </p>
+
+            </div>
+
+
+            <div class="recuerdo">
+
+                <div class="icono">
+                    ❤️
+                </div>
+
+                <h3>
+                    Nosotros
+                </h3>
+
+                <p>
+
+                    Porque después de todo lo vivido
+                    seguimos aquí aprendiendo y
+                    construyendo algo que quiero cuidar.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         SEGUNDA CARTA
+    ================================================== -->
+
+    <section class="carta revelar">
+
+        <h2>
+            Y todavía falta mucho... ❤️
+        </h2>
+
+        <p>
+
+            Estos cuatro meses son solamente una
+            pequeña parte de todo lo que quiero
+            vivir contigo.
+
+        </p>
+
+        <p>
+
+            Quiero más fotos contigo más viajes
+            más abrazos más noches hablando de
+            cualquier tontería más risas y también
+            más momentos en los que simplemente
+            podamos estar juntos sin necesitar
+            nada más.
+
+        </p>
+
+        <p>
+
+            No sé exactamente qué nos tenga
+            preparado el futuro pero sí sé algo:
+            mientras podamos seguir eligiéndonos
+            quiero seguir caminando a tu lado.
+
+        </p>
+
+        <p>
+
+            Y si algún día volvemos a abrir esta
+            página después de muchos meses quiero
+            que podamos mirar estas fotos y decir:
+
+            <span class="resaltado">
+                "mira todo lo que vivimos".
+            </span>
+
+        </p>
+
+        <div class="firma-carta">
+
+            Por nosotros. ❤️‍🩹
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         QR
+    ================================================== -->
+
+    <section class="qr-seccion revelar">
+
+        <div class="titulo-seccion">
+
+            <small>
+                Para guardar nuestro recuerdo
+            </small>
+
+            <h2>
+                Llévate nuestra historia ❤️‍🩹
+            </h2>
+
+        </div>
+
+
+        <div class="qr-contenedor">
+
+            <p class="qr-mensaje">
+
+                Escanea este código con tu celular
+                y podrás volver a nuestra historia
+                cuando quieras. ❤️
+
+            </p>
+
+
+            <div class="qr-blanco">
+
+                <div id="codigoQR"></div>
+
+            </div>
+
+
+            <p class="qr-instruccion">
+
+                📱 Apunta la cámara de tu celular
+                al código
+
+            </p>
+
+
+            <p class="qr-final">
+
+                Porque esto no quiero que sea solamente
+                una página... quiero que sea un recuerdo
+                de nosotros. ❤️‍🩹
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         SORPRESA
+    ================================================== -->
+
+    <section class="sorpresa revelar">
+
+        <div class="sorpresa-contenido">
+
+            <div class="regalo">
+
+                🎁
+
+            </div>
+
+
+            <h2>
+
+                Espera...
+
+            </h2>
+
+
+            <p>
+
+                Pensaste que ya había terminado
+                ¿verdad?
+
+                <br><br>
+
+                Todavía tengo una última cosa para ti.
+
+            </p>
+
+
+            <button
+                class="boton-sorpresa"
+                onclick="abrirSorpresa()">
+
+                Abrir mi sorpresa ❤️
+
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     MENSAJE FINAL
+===================================================== -->
+
+<section id="mensajeFinal">
+
+    <div class="final-contenido">
+
+        <div class="final-corazon">
+
+            ❤️‍🩹
+
+        </div>
+
+
+        <h2>
+
+            Mi niña hermosa
+
+        </h2>
+
+
+        <p>
+
+            Si llegaste hasta aquí quiero que
+            sepas algo...
+
+        </p>
+
+
+        <p>
+
+            De todas las cosas bonitas que me han
+            pasado, conocerte es una de las que
+            más quiero cuidar.
+
+        </p>
+
+
+        <p>
+
+            Gracias por estos 4 meses.
+
+            <br>
+
+            Y ojalá algún día podamos mirar atrás
+            y ver que este fue apenas el comienzo.
+
+        </p>
+
+
+        <div class="final-firma">
+
+            Te amo muchísimo ❤️
+
+            <br>
+
+            — Siempre tuyo
+
+        </div>
+
+
+        <button
+            class="cerrar-final"
+            onclick="cerrarSorpresa()">
+
+            ❤️ Volver a nuestros recuerdos
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =====================================================
+   MÚSICA
+===================================================== */
+
+const audio =
+    document.getElementById("musicaAudio");
+
+const botonMusica =
+    document.getElementById("botonMusica");
+
+let musicaEncendida = false;
+
+
+/* VOLUMEN AL 100% */
+
+audio.volume = 1.0;
+
+
+/* =====================================================
+   ABRIR REGALO
+===================================================== */
+
+function abrirRegalo(){
+
+    const inicio =
+        document.getElementById("inicio");
+
+
+    inicio.classList.add("oculto");
+
+
+    document.body.classList.remove("bloqueado");
+
+
+    audio.volume = 1.0;
+
+
+    audio.play()
+
+    .then(()=>{
+
+        musicaEncendida = true;
+
+        botonMusica.innerHTML = "🔊";
+
+    })
+
+    .catch(()=>{
+
+        musicaEncendida = false;
+
+        botonMusica.innerHTML = "🔇";
+
+    });
+
+
+    lanzarCorazones(15);
+
+
+    setTimeout(()=>{
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+    },500);
+
+}
+
+
+/* =====================================================
+   BOTÓN MÚSICA
+===================================================== */
+
+function alternarMusica(){
+
+    if(musicaEncendida){
+
+        audio.pause();
+
+        musicaEncendida = false;
+
+        botonMusica.innerHTML = "🔇";
+
+    }
+
+    else{
+
+        audio.volume = 1.0;
+
+        audio.play();
+
+        musicaEncendida = true;
+
+        botonMusica.innerHTML = "🔊";
+
+    }
+
+}
+
+
+/* =====================================================
+   CORAZONES
+===================================================== */
+
+function crearCorazon(){
+
+    const corazon =
+        document.createElement("div");
+
+
+    corazon.className =
+        "corazon";
+
+
+    const corazones = [
+
+        "❤️",
+        "❤️‍🩹",
+        "💕",
+        "💗",
+        "💖",
+        "💘"
+
+    ];
+
+
+    corazon.innerHTML =
+        corazones[
+            Math.floor(
+                Math.random() *
+                corazones.length
+            )
+        ];
+
+
+    corazon.style.left =
+        Math.random()*100 + "%";
+
+
+    corazon.style.fontSize =
+        (15 + Math.random()*25) + "px";
+
+
+    corazon.style.animationDuration =
+        (5 + Math.random()*6) + "s";
+
+
+    document.body.appendChild(
+        corazon
+    );
+
+
+    setTimeout(()=>{
+
+        corazon.remove();
+
+    },12000);
+
+}
+
+
+setInterval(
+    crearCorazon,
+    650
+);
+
+
+function lanzarCorazones(cantidad){
+
+    for(
+        let i=0;
+        i<cantidad;
+        i++
+    ){
+
+        setTimeout(()=>{
+
+            crearCorazon();
+
+        },i*100);
+
+    }
+
+}
+
+
+/* =====================================================
+   FOTOS
+===================================================== */
+
+const fotos = [
+
+    {
+
+        src:"fotos/foto1.jpeg",
+
+        titulo:
+            "Nuestro primer recuerdo",
+
+        descripcion:
+            "Un momento que quiero guardar para siempre."
+
+    },
+
+    {
+
+        src:"fotos/foto2.jpeg",
+
+        titulo:
+            "Un momento contigo",
+
+        descripcion:
+            "Porque contigo hasta los momentos simples se vuelven especiales."
+
+    },
+
+    {
+
+        src:"fotos/foto3.jpeg",
+
+        titulo:
+            "Una de mis favoritas",
+
+        descripcion:
+            "De esas fotos que miro y automáticamente sonrío."
+
+    },
+
+    {
+
+        src:"fotos/foto4.jpeg",
+
+        titulo:
+            "Nosotros ❤️",
+
+        descripcion:
+            "Otro pedacito de nuestra historia."
+
+    },
+
+    {
+
+        src:"fotos/foto5.jpeg",
+
+        titulo:
+            "Y vendrán muchas más",
+
+        descripcion:
+            "Porque todavía nos quedan demasiados recuerdos por crear."
+
+    }
+
+];
+
+
+let fotoActual = 0;
+
+
+/* =====================================================
+   MOSTRAR FOTO
+===================================================== */
+
+function mostrarFoto(indice){
+
+    fotoActual = indice;
+
+
+    const contenedor =
+        document.getElementById(
+            "fotoPrincipal"
+        );
+
+
+    const imagen =
+        document.getElementById(
+            "fotoGrande"
+        );
+
+
+    contenedor.classList.add(
+        "cambiando"
+    );
+
+
+    setTimeout(()=>{
+
+        imagen.src =
+            fotos[indice].src;
+
+
+        document.getElementById(
+            "tituloFoto"
+        ).textContent =
+            fotos[indice].titulo;
+
+
+        document.getElementById(
+            "descripcionFoto"
+        ).textContent =
+            fotos[indice].descripcion;
+
+
+        document.getElementById(
+            "numeroFoto"
+        ).textContent =
+            `${indice+1} / ${fotos.length}`;
+
+
+        document
+            .querySelectorAll(
+                ".miniatura"
+            )
+            .forEach(
+                (miniatura,i)=>{
+
+                    miniatura.classList.toggle(
+                        "activa",
+                        i === indice
+                    );
+
+                }
+            );
+
+
+        contenedor.classList.remove(
+            "cambiando"
+        );
+
+    },250);
+
+}
+
+
+/* =====================================================
+   SIGUIENTE
+===================================================== */
+
+function fotoSiguiente(){
+
+    let siguiente =
+        fotoActual + 1;
+
+
+    if(
+        siguiente >= fotos.length
+    ){
+
+        siguiente = 0;
+
+    }
+
+
+    mostrarFoto(
+        siguiente
+    );
+
+}
+
+
+/* =====================================================
+   ANTERIOR
+===================================================== */
+
+function fotoAnterior(){
+
+    let anterior =
+        fotoActual - 1;
+
+
+    if(anterior < 0){
+
+        anterior =
+            fotos.length - 1;
+
+    }
+
+
+    mostrarFoto(
+        anterior
+    );
+
+}
+
+
+/* =====================================================
+   IR A FOTO
+===================================================== */
+
+function irAFoto(indice){
+
+    mostrarFoto(
+        indice
+    );
+
+}
+
+
+/* =====================================================
+   SWIPE EN CELULAR
+===================================================== */
+
+let inicioX = 0;
+
+
+const fotoPrincipal =
+    document.getElementById(
+        "fotoPrincipal"
+    );
+
+
+fotoPrincipal.addEventListener(
+    "touchstart",
+    function(e){
+
+        inicioX =
+            e.touches[0].clientX;
+
+    }
+);
+
+
+fotoPrincipal.addEventListener(
+    "touchend",
+    function(e){
+
+        const finalX =
+            e.changedTouches[0].clientX;
+
+
+        const diferencia =
+            finalX - inicioX;
+
+
+        if(
+            Math.abs(diferencia) > 50
+        ){
+
+            if(
+                diferencia < 0
+            ){
+
+                fotoSiguiente();
+
+            }
+
+            else{
+
+                fotoAnterior();
+
+            }
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   ANIMACIÓN AL BAJAR
+===================================================== */
+
+const elementos =
+    document.querySelectorAll(
+        ".revelar"
+    );
+
+
+const observador =
+    new IntersectionObserver(
+
+        function(entradas){
+
+            entradas.forEach(
+                entrada=>{
+
+                    if(
+                        entrada.isIntersecting
+                    ){
+
+                        entrada.target
+                            .classList
+                            .add("visible");
+
+                    }
+
+                }
+            );
+
+        },
+
+        {
+            threshold:.12
+        }
+
+    );
+
+
+elementos.forEach(
+    elemento=>{
+
+        observador.observe(
+            elemento
+        );
+
+    }
+);
+
+
+/* =====================================================
+   ABRIR SORPRESA
+===================================================== */
+
+function abrirSorpresa(){
+
+    crearExplosion();
+
+
+    setTimeout(()=>{
+
+        document
+            .getElementById(
+                "mensajeFinal"
+            )
+            .classList
+            .add("mostrar");
+
+
+        lanzarCorazones(
+            35
+        );
+
+    },500);
+
+}
+
+
+/* =====================================================
+   CERRAR SORPRESA
+===================================================== */
+
+function cerrarSorpresa(){
+
+    document
+        .getElementById(
+            "mensajeFinal"
+        )
+        .classList
+        .remove("mostrar");
+
+}
+
+
+/* =====================================================
+   EXPLOSIÓN
+===================================================== */
+
+function crearExplosion(){
+
+    const simbolos = [
+
+        "❤️",
+        "💕",
+        "💖",
+        "❤️‍🩹",
+        "💗",
+        "✨",
+        "💘"
+
+    ];
+
+
+    for(
+        let i=0;
+        i<45;
+        i++
+    ){
+
+        const elemento =
+            document.createElement(
+                "div"
+            );
+
+
+        elemento.className =
+            "explosion";
+
+
+        elemento.innerHTML =
+            simbolos[
+                Math.floor(
+                    Math.random() *
+                    simbolos.length
+                )
+            ];
+
+
+        elemento.style.left =
+            "50%";
+
+
+        elemento.style.top =
+            "50%";
+
+
+        const angulo =
+            Math.random() *
+            Math.PI *
+            2;
+
+
+        const distancia =
+            150 +
+            Math.random()*500;
+
+
+        const x =
+            Math.cos(angulo) *
+            distancia;
+
+
+        const y =
+            Math.sin(angulo) *
+            distancia;
+
+
+        elemento.style.setProperty(
+            "--x",
+            x+"px"
+        );
+
+
+        elemento.style.setProperty(
+            "--y",
+            y+"px"
+        );
+
+
+        elemento.style.setProperty(
+            "--r",
+            (Math.random()*720-360)
+            +"deg"
+        );
+
+
+        document.body.appendChild(
+            elemento
+        );
+
+
+        setTimeout(()=>{
+
+            elemento.remove();
+
+        },2200);
+
+    }
+
+}
+
+
+/* =====================================================
+   TECLADO
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(e){
+
+        if(
+            e.key === "ArrowRight"
+        ){
+
+            fotoSiguiente();
+
+        }
+
+
+        if(
+            e.key === "ArrowLeft"
+        ){
+
+            fotoAnterior();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   CAMBIO AUTOMÁTICO DE FOTOS
+===================================================== */
+
+setInterval(()=>{
+
+    if(
+
+        document.visibilityState
+        ===
+        "visible"
+
+        &&
+
+        !document
+            .getElementById(
+                "mensajeFinal"
+            )
+            .classList
+            .contains("mostrar")
+
+    ){
+
+        fotoSiguiente();
+
+    }
+
+},7000);
+
+
+/* =====================================================
+   GENERAR QR
+===================================================== */
+
+window.addEventListener(
+    "load",
+    function(){
+
+        const direccionPagina =
+            window.location.href;
+
+
+        new QRCode(
+
+            document.getElementById(
+                "codigoQR"
+            ),
+
+            {
+
+                text:
+                    direccionPagina,
+
+                width:
+                    230,
+
+                height:
+                    230,
+
+                correctLevel:
+                    QRCode.CorrectLevel.H
+
+            }
+
+        );
+
+    }
+);
+
+</script>
+
+</body>
+</html>
